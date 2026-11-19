@@ -1,7 +1,5 @@
 /* Ember & Oak — shared design system
    Portfolio sample 01. Mobile-first, accessible, and dependency-free. */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
-
 :root {
   color-scheme: dark;
   --charcoal: #1F2124;
@@ -10,6 +8,8 @@
   --paper: #F6F4F0;
   --accent: #D3342F;
   --accent-dark: #A92724;
+  --accent-warm: #F08C69;
+  --paper-muted: #5C5954;
   --muted: #B8B8B5;
   --line: rgba(255,255,255,.12);
   --font-heading: 'Outfit', 'Arial Rounded MT Bold', sans-serif;
@@ -112,7 +112,7 @@ p { margin: 0 0 1rem; }
 .story-copy .lead { margin-block: 1.3rem; }
 .story-stats { display: flex; flex-wrap: wrap; gap: 2rem; margin-top: 2rem; }
 .stat strong { display: block; font-family: var(--font-heading); font-size: 2rem; line-height: 1; }
-.stat span { color: #77736E; font-size: .72rem; }
+.stat span { color: var(--paper-muted); font-size: .72rem; }
 
 /* Featured plates */
 .dish-grid { display: grid; gap: 1rem; }
@@ -161,8 +161,9 @@ p { margin: 0 0 1rem; }
 .footer-bottom { display: flex; flex-direction: column; gap: .6rem; padding-top: 1.2rem; border-top: 1px solid var(--line); color: #898985; font-size: .68rem; }
 
 /* Motion enhancements */
-.reveal { opacity: 0; transform: translateY(22px) scale(.99); transition: opacity .65s var(--ease), transform .65s var(--ease); }
-.reveal.is-visible { opacity: 1; transform: translateY(0) scale(1); }
+.reveal { transition: opacity .65s var(--ease), transform .65s var(--ease); }
+.js .reveal { opacity: 0; transform: translateY(22px) scale(.99); transition: opacity .65s var(--ease), transform .65s var(--ease); }
+.js .reveal.is-visible { opacity: 1; transform: translateY(0) scale(1); }
 .reveal-delay-1 { transition-delay: .08s; }
 .reveal-delay-2 { transition-delay: .16s; }
 .reveal-delay-3 { transition-delay: .24s; }
