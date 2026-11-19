@@ -1,6 +1,6 @@
 # Ember & Oak: Restaurant Website (Portfolio Sample #1)
 
-**Read this whole file before writing any code. Re-read it at the start of every session.**
+**Read this whole file before writing any code. Re-read it at the start of every session. Then read `Errors.md` and fix everything open in it before building anything new.**
 
 Sample site 1 of 5 for a web development portfolio (Lucky Mazuba Hangoma). A demo for a fictional modern wood-fire restaurant, **Ember & Oak**. It must look like a premium, intentional, hand-built site, not a template.
 
@@ -8,7 +8,7 @@ Sample site 1 of 5 for a web development portfolio (Lucky Mazuba Hangoma). A dem
 
 - Done: `index.html`, `menu.html`, `about.html`, shared CSS and JS
 - To build: `gallery.html`, `reservations.html`, `contact.html`
-- **Revision round 1 (do this before building the remaining pages):** apply the new palette and the desktop direction below to the three finished pages
+- **Revision round 1 (do this before building the remaining pages):** apply the new palette and the desktop direction below to the three finished pages, and fix the open items in `Errors.md`
 
 ## Rules of the build
 
@@ -67,8 +67,7 @@ Desktop must feel designed for a wide screen. Apply at `min-width: 1024px`, and 
 **Desktop-only interaction (`@media (hover: hover) and (pointer: fine)`)**
 - Soft cursor-following glow on the hero and CTA sections.
 - Richer hover states on cards, with a gentle lift and the art responding.
-- Interactive low-poly mesh reacts to the pointer (**listen on the hero section, not the canvas**, the canvas has `pointer-events: none`).
-- Remove the CPU core-count check that turns the mesh off. Keep the small-screen and reduced-motion checks.
+- Interactive low-poly mesh reacts to the pointer (listen on the hero section, not the canvas).
 
 ## Visuals
 
@@ -94,6 +93,7 @@ Desktop must feel designed for a wide screen. Apply at `min-width: 1024px`, and 
 ## Definition of done
 
 - All 6 pages built and linked, no console errors
+- `Errors.md` has no open items
 - Looks great on a real phone **and** on a 1440px desktop
 - Lighthouse around 90+ for Performance, Accessibility and Best Practices
 - README updated with how to run locally and deploy to Cloudflare Pages
