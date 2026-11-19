@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1F2124">
+  <title>The Menu | Ember & Oak Wood-Fire Kitchen</title>
+  <meta name="description" content="Explore the Ember & Oak menu: seasonal starters, wood-fired mains, sides, desserts and drinks, made for sharing around the table.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="The Menu | Ember & Oak">
+  <meta property="og:description" content="Seasonal plates, straight from the fire. Find something to gather around.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body class="menu-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav-shell" aria-label="Main navigation">
+        <a class="brand" href="index.html" aria-label="Ember and Oak home">
+          <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2.8c1.7 3.1 5.4 5.2 5.4 10a5.4 5.4 0 1 1-10.8 0c0-2.2 1-4.1 2.6-5.8.1 2 1.1 3.1 2 3.6-.2-3.1.1-5.3.8-7.8Z" stroke="white" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 14.1c1 1.2 1.8 2 1.8 3.1a1.8 1.8 0 1 1-3.6 0c0-.9.6-1.8 1.8-3.1Z" fill="white"/></svg></span>
+          <span>ember <span style="color:var(--accent-warm)">&</span> oak</span>
+        </a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="menu.html" aria-current="page">Menu</a>
+          <a href="about.html">Our story</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <a class="btn nav-cta" href="reservations.html">Book a table <span aria-hidden="true">↗</span></a>
+        <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-nav">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </nav>
+      <div class="mobile-nav" id="mobile-nav">
+        <a href="index.html">Home</a>
+        <a href="menu.html" aria-current="page">Menu</a>
+        <a href="about.html">Our story</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="reservations.html">Reservations</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="menu-hero" aria-labelledby="menu-title">
+      <div class="container menu-hero-inner">
+        <div class="menu-hero-copy">
+          <p class="eyebrow">A menu with a little fire</p>
+          <h1 id="menu-title">Made to be<br><em>passed around.</em></h1>
+          <p class="lead">Season-led plates, honest ingredients and the unmistakable kiss of live fire. Order another for the middle. Stay a little longer.</p>
+          <p class="menu-meta">OUR MENU CHANGES WITH THE SEASONS <span aria-hidden="true">✳</span> ALL PRICES IN USD</p>
+        </div>
+        <div class="menu-hero-art" aria-hidden="true">
+          <svg viewBox="0 0 520 440">
+            <defs><linearGradient id="menuPlate" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#F5E8D5"/><stop offset="1" stop-color="#B8A38B"/></linearGradient><linearGradient id="menuFlame" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#C9342E"/><stop offset="1" stop-color="#F5C477"/></linearGradient></defs>
+            <circle cx="260" cy="220" r="190" fill="#D9B99A" opacity=".08"/>
+            <path d="M260 35 420 130 450 300 260 405 70 300 100 130Z" fill="none" stroke="#F0C9A7" stroke-opacity=".18" stroke-width="2"/>
+            <path d="m100 130 160 90 160-90-160-95Z" fill="#B66A49" opacity=".55"/><path d="m100 130 160 90v185L70 300Z" fill="#754437" opacity=".65"/><path d="m260 220 160-90 30 170-190 105Z" fill="#D68A55" opacity=".48"/>
+            <ellipse cx="260" cy="236" rx="156" ry="104" transform="rotate(-12 260 236)" fill="url(#menuPlate)" stroke="#F8F0E5" stroke-width="8"/>
+            <ellipse cx="260" cy="236" rx="128" ry="79" transform="rotate(-12 260 236)" fill="#E7D8C3" stroke="#B6A48D" stroke-width="3"/>
+            <g transform="rotate(-12 260 236)"><path d="M169 229c17-49 92-69 139-31 37 30 19 82-21 101-48 22-139-12-118-70Z" fill="#8F4937" stroke="#65372E" stroke-width="6"/><path d="m188 202 92 71m-62-93 91 70m-51-76 69 54" stroke="#E5A16B" stroke-width="7" stroke-linecap="round"/><g fill="#77865B"><path d="M160 240q-31-31-14-47 24 7 14 47ZM180 188q-5-33 16-35 8 22-16 35ZM347 230q28-29 44-9-10 23-44 9Z"/></g><g fill="#D99B57"><circle cx="177" cy="281" r="7"/><circle cx="340" cy="274" r="8"/><circle cx="326" cy="175" r="6"/></g></g>
+            <g transform="translate(365 32)"><path d="M33 104C-1 75 19 42 40 23c-2 25 16 27 17 0 34 30 39 56 18 81-11 13-31 13-42 0Z" fill="url(#menuFlame)"/><path d="M49 103c-14-15-4-30 6-39 1 13 11 14 11 0 13 15 10 30-3 39-5 4-10 3-14 0Z" fill="#F7D28D"/></g>
+            <g fill="#F0B47B"><circle cx="82" cy="235" r="5"/><circle cx="420" cy="348" r="6"/><circle cx="118" cy="350" r="4"/><circle cx="335" cy="52" r="4"/></g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <nav class="menu-tabs" aria-label="Menu categories">
+      <div class="container menu-tabs-inner">
+        <a href="#starters" class="is-active">Starters</a>
+        <a href="#mains">Mains</a>
+        <a href="#fire">From the fire</a>
+        <a href="#sides">Sides</a>
+        <a href="#desserts">Desserts</a>
+        <a href="#drinks">Drinks</a>
+      </div>
+    </nav>
+
+    <div class="menu-content">
+      <section class="menu-section container" id="starters" aria-labelledby="starters-title">
+        <div class="menu-section-heading reveal"><div><p class="eyebrow">Start at the centre</p><h2 id="starters-title">A little something.</h2></div><p>Made for the first pour, the first story, and passing plates across the table.</p></div>
+        <div class="menu-list">
+          <article class="menu-item reveal"><div><div class="menu-item-title"><h3>Coal-kissed carrots</h3><span class="menu-price">$14</span></div><p>Whipped labneh, pistachio, garden herbs</p><div class="diet-tags"><span>V</span><span>GF</span></div></div></article>
+          <article class="menu-item reveal"><div><div class="menu-item-title"><h3>Fire-roasted sourdough</h3><span class="menu-price">$9</span></div><p>Smoked cultured butter, rosemary salt</p><div class="diet-tags"><span>V</span></div></div></article>
+          <article class="menu-item reveal"><div><div class="menu-item-title"><h3>Whipped ricotta</h3><span class="menu-price">$13</span></div><p>Charred grapes, wildflower honey, grilled bread</p><div class="diet-tags"><span>V</span></div></div></article>
+          <article class="menu-item reveal"><div><div class="menu-item-title"><h3>Crispy oyster mushrooms</h3><span class="menu-price">$15</span></div><p>Green chilli dressing, sesame, lime</p><div class="diet-tags"><span>VG</span><span>GF</span></div></div></article>
+        </div>
+      </section>
+
+      <section class="menu-section container" id="mains" aria-labelledby="mains-title">
+        <div class="menu-section-heading reveal"><div><p class="eyebrow">The heart of the table</p><h2 id="mains-title">Plates with purpose.</h2></div><p>Seasonal produce, thoughtful pairings and generous portions. Something for every kind of appetite.</p></div>
+        <div class="menu-list">
+          <article class="menu-item reveal"><div><div class="menu-item-title"><h3>Wild mushroom pappardelle</h3><span class="menu-price">$26</span></div><p>Hand-cut pasta, roasted garlic, thyme, parmesan</p><div class="diet-tags"><span>V</span></div></div></article>
+          <article class="menu-item reveal"><div><div class="menu-item-title"><h3>Slow-roasted half chicken</h3><span class="menu-price">$29</span></div><p>Lemon pan jus, crispy potatoes, charred greens</p><div class="diet-tags"><span>GF</span></div></div></article>
+          <article class="menu-item reveal"><div><div class="menu-item-title"><h3>Market fish</h3><span class="menu-price">$32</span></div><p>Today’s catch, ember-roasted fennel, citrus oil</p><div class="diet-tags"><span>GF</span></div></div></article>
+          <article class="menu-item reveal"><div><div class="menu-item-title"><h3>Smoked aubergine bowl</h3><span class="menu-price">$23</span></div><p>Herbed grains, crispy chickpeas, tahini, pomegranate</p><div class="diet-tags"><span>VG</span></div></div></article>
+        </div>
+      </section>
+
+      <section class="menu-section menu-section--fire" id="fire" aria-labelledby="fire-title">
+        <div class="container">
+          <div class="menu-section-heading reveal"><div><p class="eyebrow">The flame takes its time</p><h2 id="fire-title">Straight from<br>the fire.</h2></div><p>Seasoned simply, cooked over live embers, and rested just long enough. Ask our team about tonight’s cuts.</p></div>
+          <div class="fire-feature reveal">
+            <div class="fire-art" aria-hidden="true"><svg viewBox="0 0 460 300"><ellipse cx="230" cy="242" rx="190" ry="28" fill="#101113" opacity=".5"/><ellipse cx="230" cy="210" rx="184" ry="72" fill="#E7D9C5" stroke="#B7A58F" stroke-width="8"/><path d="M93 196c13-70 104-98 181-62 63 30 69 91 10 117-67 29-204 12-191-55Z" fill="#874333" stroke="#59342D" stroke-width="7"/><path d="m120 168 132 83m-91-112 130 82m-64-100 109 68" stroke="#E9A16B" stroke-width="11" stroke-linecap="round"/><g fill="#78865C"><path d="M104 174q-40-43-18-61 30 12 18 61ZM137 139q-3-42 23-44 10 28-23 44ZM337 180q34-36 54-14-12 28-54 14Z"/></g><g fill="#E4A95D"><circle cx="128" cy="235" r="10"/><circle cx="343" cy="223" r="9"/></g></svg></div>
+            <div class="fire-menu-list">
+              <article class="menu-item"><div><div class="menu-item-title"><h3>Ribeye, 10 oz</h3><span class="menu-price">$38</span></div><p>Brown butter, smoked shallot, pepper jus</p><div class="diet-tags"><span>GF</span></div></div></article>
+              <article class="menu-item"><div><div class="menu-item-title"><h3>Dry-aged striploin, 8 oz</h3><span class="menu-price">$42</span></div><p>Green peppercorn butter, watercress</p><div class="diet-tags"><span>GF</span></div></div></article>
+              <article class="menu-item"><div><div class="menu-item-title"><h3>Wood-fired lamb chops</h3><span class="menu-price">$36</span></div><p>Mint salsa verde, grilled lemon</p><div class="diet-tags"><span>GF</span></div></div></article>
+              <article class="menu-item"><div><div class="menu-item-title"><h3>Ember-roasted cauliflower</h3><span class="menu-price">$24</span></div><p>Almond romesco, crispy capers, parsley</p><div class="diet-tags"><span>VG</span><span>GF</span></div></div></article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="menu-section container" id="sides" aria-labelledby="sides-title">
+        <div class="menu-section-heading reveal"><div><p class="eyebrow">A good thing on the side</p><h2 id="sides-title">Make it a spread.</h2></div><p>Because the best part of sharing is getting to try a little of everything.</p></div>
+        <div class="menu-list menu-list--compact">
+          <article class="menu-item reveal"><div><div class="menu-item-title"><h3>Triple-cooked potatoes</h3><span class="menu-price">$10</span></div><p>Rosemary salt, roasted garlic aioli</p><div class="diet-tags"><span>V</span><span>GF</span></div></div></article>
+          <article class="menu-item reveal"><div><div class="menu-item-title"><h3>Market greens</h3><span class="menu-price">$11</span></div><p>Lemon, toasted seeds, shallot dressing</p><div class="diet-tags"><span>VG</span><span>GF</span></div></div></article>
+          <article class="menu-item reveal"><div><div class="menu-item-title"><h3>Charred broccolini</h3><span class="menu-price">$12</span></div><p>Chilli crunch, sesame, lime</p><div class="diet-tags"><span>VG</span><span>GF</span></div></div></article>
+          <article class="menu-item reveal"><div><div class="menu-item-title"><h3>Butter lettuce salad</h3><span class="menu-price">$10</span></div><p>Fine herbs, crisp apple, cider vinaigrette</p><div class="diet-tags"><span>VG</span><span>GF</span></div></div></article>
+        </div>
+      </section>
+
+      <section class="menu-section menu-section--paper" id="desserts" aria-labelledby="desserts-title">
+        <div class="container">
+          <div class="menu-section-heading reveal"><div><p class="eyebrow">Leave room for this</p><h2 id="desserts-title">A sweet ending.</h2></div><p>Made in-house, best enjoyed slowly. There’s always time for one more spoonful.</p></div>
+          <div class="menu-list">
+            <article class="menu-item reveal"><div><div class="menu-item-title"><h3>Burnt honey peach</h3><span class="menu-price">$12</span></div><p>Vanilla cream, oat crumble, thyme</p><div class="diet-tags"><span>V</span></div></div></article>
+            <article class="menu-item reveal"><div><div class="menu-item-title"><h3>Dark chocolate pot</h3><span class="menu-price">$13</span></div><p>Olive oil, flaky salt, hazelnut praline</p><div class="diet-tags"><span>V</span><span>GF</span></div></div></article>
+            <article class="menu-item reveal"><div><div class="menu-item-title"><h3>Roasted plum sorbet</h3><span class="menu-price">$10</span></div><p>Seasonal fruit, mint sugar</p><div class="diet-tags"><span>VG</span><span>GF</span></div></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="menu-section container" id="drinks" aria-labelledby="drinks-title">
+        <div class="menu-section-heading reveal"><div><p class="eyebrow">Raise a glass</p><h2 id="drinks-title">Something to sip.</h2></div><p>Easy-going pours, thoughtful bottles and bright things without the alcohol.</p></div>
+        <div class="menu-drinks-grid">
+          <div class="menu-list">
+            <h3 class="menu-subheading">From the bar</h3>
+            <article class="menu-item reveal"><div><div class="menu-item-title"><h3>House old fashioned</h3><span class="menu-price">$16</span></div><p>Bourbon, burnt orange, bitters</p></div></article>
+            <article class="menu-item reveal"><div><div class="menu-item-title"><h3>Garden spritz</h3><span class="menu-price">$14</span></div><p>Elderflower, cucumber, sparkling wine</p></div></article>
+            <article class="menu-item reveal"><div><div class="menu-item-title"><h3>Seasonal glass pour</h3><span class="menu-price">$15</span></div><p>Ask us what’s open tonight</p></div></article>
+          </div>
+          <div class="menu-list">
+            <h3 class="menu-subheading">Without the alcohol</h3>
+            <article class="menu-item reveal"><div><div class="menu-item-title"><h3>Rhubarb & rose fizz</h3><span class="menu-price">$9</span></div><p>Rhubarb cordial, rose, soda</p></div></article>
+            <article class="menu-item reveal"><div><div class="menu-item-title"><h3>Smoked lemonade</h3><span class="menu-price">$8</span></div><p>Charred lemon, honey, fresh mint</p></div></article>
+            <article class="menu-item reveal"><div><div class="menu-item-title"><h3>Espresso</h3><span class="menu-price">$4</span></div><p>Double shot, locally roasted beans</p></div></article>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="menu-note section--paper">
+      <div class="container menu-note-inner">
+        <div><p class="eyebrow">A note from our kitchen</p><h2>Good food<br>welcomes everyone.</h2></div>
+        <div><p>We’re happy to help with allergies and dietary needs. Please let your server know before ordering so our kitchen can guide you. While we take care, our kitchen handles common allergens.</p><p class="diet-legend"><strong>V</strong> Vegetarian <strong>VG</strong> Vegan <strong>GF</strong> Gluten-free</p><a class="text-link" href="reservations.html">Save a seat at the table <span aria-hidden="true">→</span></a></div>
+      </div>
+    </section>
+
+    <section class="reservation-cta" aria-labelledby="menu-cta-title">
+      <div class="container cta-inner reveal">
+        <div><p class="eyebrow" style="color:#FFE0D6">The fire is waiting</p><h2 id="menu-cta-title">Come hungry.<br>Leave happy.</h2><p>Bring your favourite people. We’ll take care of the rest.</p></div>
+        <a class="btn" href="reservations.html">Book your table <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2.8c1.7 3.1 5.4 5.2 5.4 10a5.4 5.4 0 1 1-10.8 0c0-2.2 1-4.1 2.6-5.8.1 2 1.1 3.1 2 3.6-.2-3.1.1-5.3.8-7.8Z" stroke="white" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 14.1c1 1.2 1.8 2 1.8 3.1a1.8 1.8 0 1 1-3.6 0c0-.9.6-1.8 1.8-3.1Z" fill="white"/></svg></span><span>ember <span style="color:#F08C69">&</span> oak</span></a>
+          <p>Seasonal plates, open flames and a seat for everyone. Made for good evenings and even better company.</p>
+        </div>
+        <div class="footer-col"><h3>Explore</h3><a href="menu.html">The menu</a><a href="about.html">Our story</a><a href="gallery.html">Gallery</a><a href="reservations.html">Reservations</a></div>
+        <div class="footer-col"><h3>Find us</h3><p>18 Foundry Lane<br>Old Town, NY 10013</p><a href="tel:+12125550184">(212) 555-0184</a><a href="mailto:hello@emberandoak.example">hello@emberandoak.example</a></div>
+        <div class="footer-col"><h3>Hours</h3><p>Mon–Thu · 5–10pm<br>Fri · 5–11pm<br>Sat · 12–11pm<br>Sun · 12–9pm</p></div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 Ember & Oak. Demo site, fictional business.</span><span>Thoughtfully made. Best enjoyed together.</span></div>
+    </div>
+  </footer>
+</body>
+</html>
