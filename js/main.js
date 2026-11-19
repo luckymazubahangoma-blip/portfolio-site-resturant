@@ -58,6 +58,26 @@
     revealItems.forEach((item) => item.classList.add('is-visible'));
   }
 
+  // Keep the sticky menu category tabs in sync with the section in view.
+  const menuLinks = Array.from(document.querySelectorAll('.menu-tabs a'));
+  if (menuLinks.length && 'IntersectionObserver' in window) {
+    const menuSections = menuLinks
+      .map((link) => document.querySelector(link.getAttribute('href')))
+      .filter(Boolean);
+    const menuObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        menuLinks.forEach((link) => {
+          const active = link.getAttribute('href') === '#' + entry.target.id;
+          link.classList.toggle('is-active', active);
+          if (active) link.setAttribute('aria-current', 'location');
+          else link.removeAttribute('aria-current');
+        });
+      });
+    }, { rootMargin: '-22% 0px -65% 0px', threshold: 0 });
+    menuSections.forEach((section) => menuObserver.observe(section));
+  }
+
   // A restrained, interactive low-poly mesh for the homepage hero.
   // It pauses when off-screen and is omitted on small/low-power devices.
   const canvas = document.getElementById('hero-mesh');
