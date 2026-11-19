@@ -2,6 +2,8 @@
    Content and navigation remain usable when JavaScript is unavailable. */
 (() => {
   'use strict';
+  // Hidden reveal states are enabled only after this script has loaded.
+  document.documentElement.classList.add('js');
 
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -62,9 +64,8 @@
   if (!canvas || reducedMotion) return;
 
   const context = canvas.getContext('2d', { alpha: true });
-  const lowPower = window.matchMedia('(max-width: 700px)').matches ||
-    (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 4);
-  if (!context || lowPower) return;
+  const smallScreen = window.matchMedia('(max-width: 520px)').matches;
+  if (!context || smallScreen) return;
 
   let width = 0;
   let height = 0;
@@ -156,7 +157,8 @@
     frame = 0;
   };
 
-  canvas.addEventListener('pointermove', (event) => {
+  const heroSection = canvas.closest('.hero') || canvas;
+  heroSection.addEventListener('pointermove', (event) => {
     const bounds = canvas.getBoundingClientRect();
     targetPointer = {
       x: (event.clientX - bounds.left) / bounds.width,
@@ -164,7 +166,7 @@
     };
   }, { passive: true });
 
-  canvas.addEventListener('pointerleave', () => {
+  heroSection.addEventListener('pointerleave', () => {
     targetPointer = { x: 0.5, y: 0.5 };
   }, { passive: true });
 
