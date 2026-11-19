@@ -476,3 +476,21 @@ p { max-width: 65ch; }
  .menu-content { margin-left:clamp(220px,18vw,280px); }
  .menu-section.container { width:min(calc(100% - 4rem),1120px); margin-inline:auto; }
 }
+
+/* Final desktop composition and readable microcopy safeguards. */
+.hours-note { margin:1.2rem 0 0; color:#4A443B; font-size:.875rem; }
+.accent-text { color:var(--ember-deep); }
+.top-gap { margin-top:2rem; }
+.value-icon svg { width:26px; height:26px; }
+@media (min-width:1024px) {
+  .hero-grid { grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr); gap:3rem; }
+  .hero-art { position:relative; inset:auto; grid-column:2; grid-row:1; width:100%; max-width:680px; opacity:1; justify-self:end; transform:none; }
+  .hero-copy { grid-column:1; grid-row:1; }
+  .footer-col a,.footer-col p,.footer-brand p,.footer-bottom,.nav-links a,.hero-note,.hero-scroll,
+  .menu-tabs a,.menu-meta,.menu-item p,.diet-tags span,.diet-legend,.value-number,.value-card p,
+  .timeline-year,.timeline-item p,.timeline-note,.team-disclaimer,.team-card-copy > p:last-child,
+  .sourcing-list p,.sourcing-disclaimer,.hours-row,.quote-person,.stat span {
+    font-size:max(14px, .875rem);
+  }
+  .about-art-note { font-size:14px; }
+}
