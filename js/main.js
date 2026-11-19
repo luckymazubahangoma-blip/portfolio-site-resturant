@@ -30,7 +30,7 @@
     });
 
     document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape') {
+      if (event.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') {
         closeMenu();
         menuButton.focus();
       }
@@ -78,6 +78,17 @@
     menuSections.forEach((section) => menuObserver.observe(section));
   }
 
+  // Desktop cursor glow follows the pointer without affecting layout.
+  if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    document.querySelectorAll('.hero, .reservation-cta').forEach((surface) => {
+      surface.addEventListener('pointermove', (event) => {
+        const bounds = surface.getBoundingClientRect();
+        surface.style.setProperty('--pointer-x', (event.clientX - bounds.left) + 'px');
+        surface.style.setProperty('--pointer-y', (event.clientY - bounds.top) + 'px');
+      }, { passive: true });
+    });
+  }
+
   // A restrained, interactive low-poly mesh for the homepage hero.
   // It pauses when off-screen and is omitted on small/low-power devices.
   const canvas = document.getElementById('hero-mesh');
@@ -97,18 +108,20 @@
   const columns = 9;
   const rows = 6;
 
-  const makePoints = () => {
+  const makePoints = (preserve = false) => {
     points = [];
     for (let row = 0; row <= rows; row += 1) {
       for (let column = 0; column <= columns; column += 1) {
-        const jitterX = (Math.random() - 0.5) * 38;
-        const jitterY = (Math.random() - 0.5) * 34;
+        const previous = preserve ? points[row * (columns + 1) + column] : null;
+        const jitterX = previous ? previous.jitterX : (Math.random() - 0.5) * 38;
+        const jitterY = previous ? previous.jitterY : (Math.random() - 0.5) * 34;
         points.push({
           x: (column / columns) * width + jitterX,
           y: (row / rows) * height + jitterY,
           baseX: (column / columns) * width + jitterX,
           baseY: (row / rows) * height + jitterY,
-          phase: Math.random() * Math.PI * 2
+          jitterX, jitterY,
+          phase: previous ? previous.phase : Math.random() * Math.PI * 2
         });
       }
     }
@@ -122,7 +135,7 @@
     canvas.width = Math.round(width * pixelRatio);
     canvas.height = Math.round(height * pixelRatio);
     context.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
-    makePoints();
+    makePoints(points.length > 0);
   };
 
   const drawTriangle = (a, b, c, alpha) => {
