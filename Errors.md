@@ -31,7 +31,6 @@ Reviewed: `css/styles.css`, `js/main.js`, `index.html`, `menu.html`, `about.html
 17. **Small grey text below 4.5:1 contrast** on the paper background: `.timeline-note`, `.team-disclaimer`, `.sourcing-disclaimer`. Darken them.
 18. **Menu tab bar alignment on desktop.** `.menu-tabs-inner` uses `width: max-content` with auto margins, so on wide screens the tabs may centre instead of aligning with the content edge. Check at 1440px.
 19. **Duplicate CSS declarations.** `.hero` has two `min-height` lines and `.reveal` is defined twice. Clean up.
-20. **Em dashes in copy** (for example "begins—and"). The owner prefers commas or full stops. Rewrite them.
 
 ## Rules to avoid repeating these
 
@@ -41,7 +40,7 @@ Reviewed: `css/styles.css`, `js/main.js`, `index.html`, `menu.html`, `about.html
 - No text under 14px. No letter-spacing tighter than `-0.03em`.
 - Every interactive or informational element needs an accessible name.
 - Accurate wording for anything about food allergies, prices and opening hours.
-- Add the "Errors.md" check to your routine: read it first, fix first, log fixes.
+- Read this file first, fix first, and log fixes at the bottom.
 
 ## Fixed
 
