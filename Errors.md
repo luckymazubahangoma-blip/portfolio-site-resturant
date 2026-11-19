@@ -5,32 +5,13 @@
 Reviewed: `css/styles.css`, `js/main.js`, `index.html`, `menu.html`, `about.html`.
 
 ## High priority
+1. **Broken links to pages still in progress.** gallery.html, reservations.html and contact.html are not built yet. This remains open until all six pages exist and every local link is checked.
 
-1. **Broken links on every page.** `gallery.html`, `reservations.html` and `contact.html` do not exist yet, but the nav, CTAs and footer all link to them. Build them, then check every link.
-2. **Hard-coded colours will break the new palette.** Inline styles such as `style="color:#F08C69"` and `style="color:#FFE0D6"` (footer brand "&", CTA eyebrow) and the `stroke="white"` flame logo ignore the CSS variables. Replace every hard-coded colour in HTML, SVG and CSS with a variable. No colour values outside `:root`, except inside the low-poly artwork.
-3. **Brand mark contrast after the palette change.** The flame icon sits on the orange accent. White on `#FF5B14` fails contrast, so the icon must be `--ink`.
-4. **Wrong or misleading allergen sentence in `menu.html`.** The note says "While we take care, our kitchen handles common allergens." That reads as a reassurance and is poorly worded. Replace with: "Our kitchen handles common allergens, so we cannot guarantee any dish is free of them. Please tell your server about any allergy before ordering." Food allergy wording must be accurate and clear.
-5. **Desktop layout is mobile scaled up.** See README "Desktop direction". Includes tiny text (11 to 13px), over-tight letter-spacing, and the same hero composition on every page.
+2. **Colour audit is not fully closed.** The new palette tokens and brand mark are in place. Remaining literal colours are primarily inside low-poly SVG artwork (permitted by the README), but the stylesheet still needs a final audit to ensure no non-art CSS colour literals remain.
 
 ## Medium priority
-
-6. **Flash of visible content on load.** `js/main.js` adds the `js` class with a deferred script, so `.reveal` content shows, then hides, then animates in. Add `<script>document.documentElement.classList.add('js')</script>` inline in the `<head>` of every page, before the stylesheet.
-7. **Escape key steals focus.** In `main.js`, pressing Escape anywhere focuses the menu button, even when the menu is closed. Only close and refocus when the menu is open.
-8. **Mesh jumps on resize.** `resize()` calls `makePoints()`, which re-randomises the jitter. Keep a fixed seed or scale the existing points.
-9. **Missing `og:image`** on `menu.html` and `about.html`, and `index.html` uses a placeholder URL. Make a real social image and add the tag to every page.
-10. **`theme-color` meta is the old charcoal** on every page. Update it to `--ink`.
-11. **Dead element.** `about.html` has `<div class="about-hero-grain">` and no CSS for it. Remove it or style it.
-12. **Dietary tags are not accessible.** `<span>V</span>`, `GF` and `VG` are read out as bare letters. Add `aria-label` or visually hidden full words ("Vegetarian", "Gluten-free", "Vegan").
-13. **Possibly wrong dietary tags.** "Crispy oyster mushrooms" is tagged GF but crispy coatings usually contain wheat flour. Parmesan is usually not vegetarian (animal rennet). Either change the dish description or the tag.
-14. **Heading hierarchy in the drinks section.** `h3.menu-subheading` ("From the bar") has `h3` items inside it. Items should be `h4`.
-15. **Unicode symbols used as icons** (`✳`, `⌁`, `♡`) in the values cards and the "menu-meta" line. They render differently or not at all on some devices. Replace with inline SVG icons.
-
-## Low priority
-
-16. **`letter-spacing: -.1em`** on `.about-big-mark` ("E&O") crushes the letters. Use no tighter than `-0.03em`.
-17. **Small grey text below 4.5:1 contrast** on the paper background: `.timeline-note`, `.team-disclaimer`, `.sourcing-disclaimer`. Darken them.
-18. **Menu tab bar alignment on desktop.** `.menu-tabs-inner` uses `width: max-content` with auto margins, so on wide screens the tabs may centre instead of aligning with the content edge. Check at 1440px.
-19. **Duplicate CSS declarations.** `.hero` has two `min-height` lines and `.reveal` is defined twice. Clean up.
+- **Desktop visual verification remains outstanding.** Desktop layouts and type scale have been revised, but the required 1280, 1440 and 1920 viewport checks have not been run in a browser.
+- **No browser console or Lighthouse run yet.** These require a real browser test before sign-off.
 
 ## Rules to avoid repeating these
 
@@ -43,6 +24,15 @@ Reviewed: `css/styles.css`, `js/main.js`, `index.html`, `menu.html`, `about.html
 - Read this file first, fix first, and log fixes at the bottom.
 
 ## Fixed
+
+- Revision round 1 palette: added the ink/oat/ember token set and updated shared page styling.
+- Added desktop-specific hero compositions, a two-column menu layout, a left-side sticky menu category rail, wider content and spacing.
+- Added real low-poly social preview artwork and og:image metadata to all three existing pages.
+- Added the inline early js class and updated all existing theme-color metadata.
+- Fixed Escape-key focus handling and preserved mesh jitter across resize.
+- Replaced the allergen note with the requested clear warning; removed uncertain gluten-free and vegetarian claims.
+- Added accessible full-word dietary labels, corrected drinks heading levels, replaced decorative Unicode symbols with SVG, and corrected oversized ampersand tracking.
+- Removed the unused about-hero grain element and darkened low-contrast supporting text.
 
 - Mesh did not react to the pointer (now listens on the hero section)
 - Mesh was disabled on devices with 4 or fewer CPU cores (check removed)
