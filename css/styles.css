@@ -167,7 +167,7 @@ p { margin: 0 0 1rem; }
 .reveal-delay-1 { transition-delay: .08s; }
 .reveal-delay-2 { transition-delay: .16s; }
 .reveal-delay-3 { transition-delay: .24s; }
-@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; } .hero-orbit { animation: none; } }
+@media (prefers-reduced-motion: reduce) { .reveal, .js .reveal { opacity: 1; transform: none; } .hero-orbit { animation: none; } }
 
 @media (min-width: 640px) {
   .container { width: min(calc(100% - 4rem), var(--content)); }
