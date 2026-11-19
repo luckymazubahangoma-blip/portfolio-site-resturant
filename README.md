@@ -6,9 +6,16 @@ Sample site 1 of 5 for a web development portfolio (Lucky Mazuba Hangoma). A dem
 
 ## Status
 
-- Done: `index.html`, `menu.html`, `about.html`, shared CSS and JS
+- Done: `index.html`, `menu.html`, `about.html`, shared CSS and JS; revision round 1 applied to all three existing pages.
+- Added: `images/ember-og.svg` social preview artwork.
+- Still to build: `gallery.html`, `reservations.html`, `contact.html`.
 - To build: `gallery.html`, `reservations.html`, `contact.html`
-- **Revision round 1 (do this before building the remaining pages):** apply the new palette and the desktop direction below to the three finished pages, and fix the open items in `Errors.md`
+- **Revision round 1: complete for the three existing pages.** New palette, desktop direction and the applicable review fixes are committed. Remaining checks and unfinished-page link targets are tracked in `Errors.md`.
+
+## Running locally and deploying
+
+- Run locally by opening `index.html` in a browser, or serve the repository root with any static file server.
+- Deploy the repository to Cloudflare Pages with the project root as the build directory and no build command; the output is the repository root.
 
 ## Rules of the build
 
