@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#1F2124">
+  <meta name="theme-color" content="#0C1B33">
   <title>Ember & Oak | Wood-Fire Dining, Thoughtfully Made</title>
   <meta name="description" content="Gather around the fire at Ember & Oak. Seasonal ingredients, open-flame cooking and generous hospitality in the heart of the city.">
   <meta property="og:type" content="website">
@@ -12,6 +12,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.add('js')</script>
+  <meta property="og:image" content="images/ember-og.svg">
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/main.js" defer></script>
 </head>
@@ -22,9 +24,9 @@
       <nav class="nav-shell" aria-label="Main navigation">
         <a class="brand" href="index.html" aria-label="Ember and Oak home">
           <span class="brand-mark" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M12 2.8c1.7 3.1 5.4 5.2 5.4 10a5.4 5.4 0 1 1-10.8 0c0-2.2 1-4.1 2.6-5.8.1 2 1.1 3.1 2 3.6-.2-3.1.1-5.3.8-7.8Z" stroke="white" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 14.1c1 1.2 1.8 2 1.8 3.1a1.8 1.8 0 1 1-3.6 0c0-.9.6-1.8 1.8-3.1Z" fill="white"/></svg>
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 2.8c1.7 3.1 5.4 5.2 5.4 10a5.4 5.4 0 1 1-10.8 0c0-2.2 1-4.1 2.6-5.8.1 2 1.1 3.1 2 3.6-.2-3.1.1-5.3.8-7.8Z" stroke="var(--ink)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 14.1c1 1.2 1.8 2 1.8 3.1a1.8 1.8 0 1 1-3.6 0c0-.9.6-1.8 1.8-3.1Z" fill="var(--ink)"/></svg>
           </span>
-          <span>ember <span style="color:var(--accent-warm)">&</span> oak</span>
+          <span>ember <span class="brand-ampersand">&</span> oak</span>
         </a>
         <div class="nav-links">
           <a href="index.html" aria-current="page">Home</a>
@@ -225,7 +227,7 @@
 
     <section class="reservation-cta" aria-labelledby="cta-title">
       <div class="container cta-inner reveal">
-        <div><p class="eyebrow" style="color:#FFE0D6">Pull up a chair</p><h2 id="cta-title">Make tonight<br>a little warmer.</h2><p>Good things happen around a table. We'd love to save you a seat.</p></div>
+        <div><p class="eyebrow" class="eyebrow eyebrow--cta">Pull up a chair</p><h2 id="cta-title">Make tonight<br>a little warmer.</h2><p>Good things happen around a table. We'd love to save you a seat.</p></div>
         <a class="btn" href="reservations.html">Book your table <span aria-hidden="true">↗</span></a>
       </div>
     </section>
@@ -235,7 +237,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2.8c1.7 3.1 5.4 5.2 5.4 10a5.4 5.4 0 1 1-10.8 0c0-2.2 1-4.1 2.6-5.8.1 2 1.1 3.1 2 3.6-.2-3.1.1-5.3.8-7.8Z" stroke="white" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 14.1c1 1.2 1.8 2 1.8 3.1a1.8 1.8 0 1 1-3.6 0c0-.9.6-1.8 1.8-3.1Z" fill="white"/></svg></span><span>ember <span style="color:#F08C69">&</span> oak</span></a>
+          <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2.8c1.7 3.1 5.4 5.2 5.4 10a5.4 5.4 0 1 1-10.8 0c0-2.2 1-4.1 2.6-5.8.1 2 1.1 3.1 2 3.6-.2-3.1.1-5.3.8-7.8Z" stroke="white" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 14.1c1 1.2 1.8 2 1.8 3.1a1.8 1.8 0 1 1-3.6 0c0-.9.6-1.8 1.8-3.1Z" fill="white"/></svg></span><span>ember <span class="brand-ampersand">&</span> oak</span></a>
           <p>Seasonal plates, open flames and a seat for everyone. Made for good evenings and even better company.</p>
         </div>
         <div class="footer-col"><h3>Explore</h3><a href="menu.html">The menu</a><a href="about.html">Our story</a><a href="gallery.html">Gallery</a><a href="reservations.html">Reservations</a></div>
