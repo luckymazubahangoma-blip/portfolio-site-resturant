@@ -89,6 +89,29 @@
     });
   }
 
+
+  // Accessible, progressive gallery filters.
+  const galleryGrid = document.getElementById('gallery-grid');
+  const galleryFilters = Array.from(document.querySelectorAll('[data-gallery-filter]'));
+  if (galleryGrid && galleryFilters.length) {
+    const galleryCards = Array.from(galleryGrid.querySelectorAll('[data-gallery-category]'));
+    galleryFilters.forEach((button) => {
+      button.addEventListener('click', () => {
+        const selected = button.dataset.galleryFilter;
+        galleryFilters.forEach((filter) => {
+          const active = filter === button;
+          filter.classList.toggle('is-active', active);
+          filter.setAttribute('aria-pressed', String(active));
+        });
+        galleryCards.forEach((card) => {
+          card.hidden = selected !== 'all' && card.dataset.galleryCategory !== selected;
+        });
+        const emptyState = document.querySelector('.gallery-empty');
+        if (emptyState) emptyState.hidden = galleryCards.some((card) => !card.hidden);
+      });
+    });
+  }
+
   // A restrained, interactive low-poly mesh for the homepage hero.
   // It pauses when off-screen and is omitted on small/low-power devices.
   const canvas = document.getElementById('hero-mesh');
