@@ -2,11 +2,11 @@
 
 **Read this at the start of every session, right after README.md.** Fix applicable open items before starting a new page. When an item is fixed, move it to the Fixed list with the commit that resolved it.
 
-Last reviewed (Nov 20): `index.html`, `menu.html`, `about.html`, `css/styles.css`, `js/main.js`. Code reviewed; browser checks are still outstanding.
+Last reviewed (Nov 20): `reservations.html`, shared CSS and JS, plus the existing page instructions. Browser checks are still outstanding.
 
 ## High priority
 
-1. **Broken links to pages not built yet.** `gallery.html` is now built. `reservations.html` and `contact.html` remain. Recheck every local link after both pages exist.
+1. **Broken links to pages not built yet.** `reservations.html` is now built. `contact.html` remains. Recheck every local link across all six pages after Contact is built.
 
 2. **Social preview format and canonical URL.** Existing pages currently reference a relative SVG. Social crawlers need an absolute PNG/JPG URL. The live site domain has not yet been provided, so the absolute image URL and `og:url` cannot be set reliably. Finish when the Cloudflare Pages domain/custom domain is known.
 
@@ -16,6 +16,7 @@ Last reviewed (Nov 20): `index.html`, `menu.html`, `about.html`, `css/styles.css
 
 ## Fixed
 
+- Built `reservations.html` with an accessible table-request form, native field validation, a date minimum, responsive desktop layout and an explicit demo-only success state; no backend or real booking submission is implied.
 - Built `gallery.html` with six original low-poly SVG illustrations, responsive asymmetric cards and keyboard-accessible category filters.
 - Corrected duplicate CTA eyebrow class attributes on all three existing pages; CTA eyebrow now uses ink text on ember.
 - Rebuilt the desktop menu navigation as a two-column layout with an in-flow sticky category rail; removed the fixed rail and menu offset.
