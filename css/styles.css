@@ -2,7 +2,7 @@
    Portfolio sample 01. Mobile-first, accessible, and dependency-free. */
 :root {
   color-scheme: dark;
-  --ink: #0C1B33; --ink-rgb: 12,27,51; --ink-deep: #08152A; --ink-soft: #14284A; --oat: #F4EBDB; --oat-rgb: 244,235,219; --oat-deep: #E8DCC6;
+  --ink: #0C1B33; --ink-rgb: 12,27,51; --ink-deep: #08152A; --ink-soft-rgb: 20,40,74; --ink-soft: #14284A; --oat: #F4EBDB; --oat-rgb: 244,235,219; --oat-deep: #E8DCC6;
   --ember: #FF5B14; --ember-rgb: 255,91,20; --ember-hot: #FF7A3C; --ember-hot-rgb: 255,122,60; --ember-deep: #B83B0A; --ember-deep-rgb: 184,59,10;
   --charcoal: var(--ink); --charcoal-soft: var(--ink-soft); --white: var(--oat); --paper: var(--oat);
   --accent: var(--ember); --accent-dark: var(--ember-deep); --accent-warm: var(--ember-hot);
@@ -118,7 +118,7 @@ p { margin: 0 0 1rem; }
 .visit-grid { display: grid; gap: 2rem; }
 .visit-card { padding: 1.6rem; border: 1px solid rgba(var(--ink-rgb),.12); border-radius: var(--radius-card); background: var(--oat-deep); }
 .visit-card h3 { margin-bottom: 1rem; }
-.hours-row { display: flex; justify-content: space-between; gap: 1rem; padding: .65rem 0; border-bottom: 1px solid rgba(31,33,36,.12); color: #4A443B; font-size: .875rem; }
+.hours-row { display: flex; justify-content: space-between; gap: 1rem; padding: .65rem 0; border-bottom: 1px solid rgba(var(--ink-rgb),.12); color: #4A443B; font-size: .875rem; }
 .hours-row:last-child { border: 0; }
 .hours-row strong { color: var(--charcoal); }
 .visit-aside { display: flex; flex-direction: column; justify-content: center; }
@@ -370,7 +370,7 @@ p { margin: 0 0 1rem; }
   h3 { letter-spacing:-.01em; }
   .eyebrow { font-size:.875rem; letter-spacing:.14em; }
   .hero { min-height:min(860px,92svh); padding:9rem 0 6rem; }
-  .hero::before { background:radial-gradient(ellipse at 78% 50%,rgba(20,40,74,.55),transparent 55%); }
+  .hero::before { background:radial-gradient(ellipse at 78% 50%,rgba(var(--ink-soft-rgb),.55),transparent 55%); }
   .hero-grid { grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr); gap:3rem; }
   .hero-copy { grid-column:1; grid-row:1; max-width:590px; }
   .hero h1 { font-size:clamp(3.5rem,5.2vw,5.6rem); }
