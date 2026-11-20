@@ -2,7 +2,7 @@
 
 **Read this at the start of every session, right after README.md.** Fix applicable open items before starting a new page. When an item is fixed, move it to the Fixed list with the commit that resolved it.
 
-Last reviewed (Nov 20): all six HTML pages for local page links; `contact.html` and its new shared CSS. Browser checks and image replacement remain outstanding.
+Last reviewed (Nov 20): all six HTML pages and shared CSS for the stock-photo refresh and footer credits. Browser checks remain outstanding.
 
 ## High priority
 
@@ -12,12 +12,13 @@ Last reviewed (Nov 20): all six HTML pages for local page links; `contact.html` 
 
 ## Medium priority
 
-3. **Photography assets not yet committed.** The reference sheet establishes the target mood, but the individual optimised WebP/PNG assets listed in the README are not in `images/`. Gallery and Reservations still contain low-poly art; Contact currently uses CSS-drawn exterior artwork and a stylised inline map. Replace these when the named image files are supplied.
+3. ~~Photography assets not yet committed.~~ Switched the visual direction to a compact set of Unsplash-hosted stock photographs across Home, Menu, About, Gallery, Reservations and Contact. Footer credit now identifies the imagery as stock photography. The map remains a simple inline graphic and fictional team portraits remain illustrated.
 
 4. **Browser and viewport checks.** Required checks at 360, 768, 900, 1024, 1280, 1440 and 1920px, plus real-phone inspection, console checks and Lighthouse are not yet complete. Do not claim a score until measured.
 
 ## Fixed
 
+- Replaced the main low-poly hero, story, dish, menu, gallery, reservation and contact visual treatments with a coherent set of Unsplash-hosted stock photographs. Increased the home hero dish image size and added a dark overlay for readable copy. Updated every page footer to credit stock photography. Commit: `868cb97` (photo styles), followed by per-page footer/accessibility commits.
 - Built `contact.html` with address, opening hours, phone/email links, a stylised neighbourhood map and keyboard-accessible native FAQ disclosures. Added responsive desktop styling; mobile layout follows the existing design conventions.
 - Audited local page links across all six pages: 124 local page references checked, no missing page targets. Commit: `76905bb` (page), `f8b9972` (styles), `2eb63f4` (map label cleanup).
 - Built `reservations.html` with an accessible table-request form, native field validation, a date minimum, responsive desktop layout and an explicit demo-only success state; no backend or real booking submission is implied.
