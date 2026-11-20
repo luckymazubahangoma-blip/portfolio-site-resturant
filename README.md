@@ -6,10 +6,11 @@ Sample site 1 of 5 for a web development portfolio (Lucky Mazuba Hangoma). A dem
 
 ## Status
 
-- Done: `index.html`, `menu.html`, `about.html`, shared CSS and JS; revision round 1 applied to all three existing pages.
+- Done: `index.html`, `menu.html`, `about.html`, shared CSS and JS; revision round 1 applied to the first three pages.
 - Added: `images/ember-og.svg` social preview artwork.
 - Done: `gallery.html` with six original low-poly illustrations and accessible category filters.
-- Still to build: `reservations.html` and `contact.html`.
+- Done: `reservations.html` with an accessible, locally validated demo request form and a clear non-booking confirmation state.
+- Still to build: `contact.html`.
 - **Revision round 1: complete for the three existing pages.** New palette, desktop direction and the applicable review fixes are committed. Remaining checks and unfinished-page link targets are tracked in `Errors.md`.
 
 ## Running locally and deploying
