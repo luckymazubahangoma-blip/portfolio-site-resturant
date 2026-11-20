@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0C1B33">
+  <title>Reservations | Ember & Oak Wood-Fire Kitchen</title>
+  <meta name="description" content="Make a plan for a good evening at Ember & Oak. Send a table request for seasonal plates, open flames and easy company.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Reservations | Ember & Oak">
+  <meta property="og:description" content="A seat by the fire, a table for your people. Start your Ember & Oak visit here.">
+  <meta property="og:image" content="images/ember-og.svg">
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body class="reservations-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav-shell" aria-label="Main navigation">
+        <a class="brand" href="index.html" aria-label="Ember and Oak home">
+          <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2.8c1.7 3.1 5.4 5.2 5.4 10a5.4 5.4 0 1 1-10.8 0c0-2.2 1-4.1 2.6-5.8.1 2 1.1 3.1 2 3.6-.2-3.1.1-5.3.8-7.8Z" stroke="var(--ink)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 14.1c1 1.2 1.8 2 1.8 3.1a1.8 1.8 0 1 1-3.6 0c0-.9.6-1.8 1.8-3.1Z" fill="var(--ink)"/></svg></span>
+          <span>ember <span class="brand-ampersand">&</span> oak</span>
+        </a>
+        <div class="nav-links">
+          <a href="index.html">Home</a><a href="menu.html">Menu</a><a href="about.html">Our story</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a>
+        </div>
+        <a class="btn nav-cta" href="reservations.html" aria-current="page">Book a table <span aria-hidden="true">↗</span></a>
+        <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-nav">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </nav>
+      <div class="mobile-nav" id="mobile-nav">
+        <a href="index.html">Home</a><a href="menu.html">Menu</a><a href="about.html">Our story</a><a href="gallery.html">Gallery</a><a href="reservations.html" aria-current="page">Reservations</a><a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="reservations-hero" aria-labelledby="reservations-title">
+      <div class="container reservations-layout">
+        <div class="reservations-intro">
+          <p class="eyebrow">Make an evening of it</p>
+          <h1 id="reservations-title">Your table<br>is <em>waiting.</em></h1>
+          <p class="lead">A little fire, something good on the plate, and time well spent. Tell us when you’d like to come by and we’ll take it from there.</p>
+          <div class="reservations-aside">
+            <div class="reservation-mark" aria-hidden="true">
+              <svg viewBox="0 0 260 220" fill="none">
+                <path d="M24 174h212" stroke="#B9855F" stroke-width="12" stroke-linecap="round"/>
+                <path d="m61 162 45-28 83 27-43 24Z" fill="#8F4937"/>
+                <path d="m106 134 83 27-2 24-82-29Z" fill="#63382E"/>
+                <path d="M104 143c-24-33 4-63 20-92 5 30 25 32 22-3 40 38 41 73 10 97-18 13-41 12-52-2Z" fill="#FF5B14"/>
+                <path d="M127 146c-12-20 7-38 13-57 8 20 20 24 17-2 22 25 19 45 2 58-12 9-26 8-32 1Z" fill="#FF7A3C"/>
+                <path d="M139 145c-5-11 5-20 9-29 4 11 10 13 8-1 12 13 9 25-1 31-7 4-13 2-16-1Z" fill="#F4EBDB"/>
+                <g fill="#FF7A3C"><circle cx="45" cy="62" r="5"/><circle cx="215" cy="92" r="6"/><circle cx="197" cy="42" r="3"/></g>
+                <path d="M37 194h186" stroke="#E8DCC6" stroke-opacity=".55" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div><span class="eyebrow">A note from the house</span><p>For groups of seven or more, please get in touch directly so we can find the right spot for everyone.</p><a href="contact.html">Contact the team <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </div>
+
+        <div class="reservation-panel">
+          <div class="reservation-panel-heading">
+            <div><p class="eyebrow">A seat at our table</p><h2>Plan your visit</h2></div>
+            <span class="reservation-step" aria-label="Step 1 of 1">01 <span>/ 01</span></span>
+          </div>
+          <form class="reservation-form" id="reservation-form" novalidate>
+            <div class="reservation-fields">
+              <div class="form-field">
+                <label for="guest-name">Your name <span aria-hidden="true">*</span></label>
+                <input id="guest-name" name="name" type="text" autocomplete="name" placeholder="Name for the table" required>
+              </div>
+              <div class="form-field">
+                <label for="guest-email">Email address <span aria-hidden="true">*</span></label>
+                <input id="guest-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+              </div>
+              <div class="form-field">
+                <label for="guest-phone">Phone number <span class="optional">(optional)</span></label>
+                <input id="guest-phone" name="phone" type="tel" autocomplete="tel" placeholder="+1 (555) 000-0000">
+              </div>
+              <div class="form-field">
+                <label for="guest-count">Number of guests <span aria-hidden="true">*</span></label>
+                <select id="guest-count" name="guests" required>
+                  <option value="2" selected>2 guests</option>
+                  <option value="1">1 guest</option>
+                  <option value="3">3 guests</option>
+                  <option value="4">4 guests</option>
+                  <option value="5">5 guests</option>
+                  <option value="6">6 guests</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="visit-date">Date <span aria-hidden="true">*</span></label>
+                <input id="visit-date" name="date" type="date" required>
+              </div>
+              <div class="form-field">
+                <label for="visit-time">Preferred time <span aria-hidden="true">*</span></label>
+                <select id="visit-time" name="time" required>
+                  <option value="" selected disabled>Choose a time</option>
+                  <option>12:00 pm</option><option>12:30 pm</option><option>1:00 pm</option><option>1:30 pm</option>
+                  <option>5:00 pm</option><option>5:30 pm</option><option>6:00 pm</option><option>6:30 pm</option>
+                  <option>7:00 pm</option><option>7:30 pm</option><option>8:00 pm</option><option>8:30 pm</option><option>9:00 pm</option>
+                </select>
+              </div>
+              <div class="form-field form-field--full">
+                <label for="visit-note">Anything we should know? <span class="optional">(optional)</span></label>
+                <textarea id="visit-note" name="note" rows="3" placeholder="Celebration, seating request or a note for our team…"></textarea>
+              </div>
+            </div>
+            <p class="reservation-privacy">We’ll only use these details to follow up about your table request. Please share any access or seating needs in the note above.</p>
+            <button class="btn reservation-submit" id="reservation-submit" type="button">Request a table <span aria-hidden="true">↗</span></button>
+            <p class="reservation-demo-note">This is a portfolio demo. No booking is sent or confirmed.</p>
+            <div class="reservation-success" id="reservation-success" role="status" aria-live="polite" tabindex="-1" hidden>
+              <span class="success-mark" aria-hidden="true">✓</span>
+              <div><h3>Thanks for stopping by.</h3><p>Your demo request is complete. In a live restaurant site, the team would follow up to confirm availability. No reservation has been sent.</p></div>
+              <button class="reservation-reset" id="reservation-reset" type="button">Make another request</button>
+            </div>
+          </form>
+          <noscript><p class="reservation-noscript">The request form is a demonstration and needs JavaScript to show its confirmation. You can still reach the team through the <a href="contact.html">contact page</a>.</p></noscript>
+        </div>
+      </div>
+    </section>
+
+    <section class="reservation-details section--paper" aria-labelledby="reservation-details-title">
+      <div class="container reservation-details-grid">
+        <div class="reservation-details-copy reveal">
+          <p class="eyebrow">Before you arrive</p>
+          <h2 id="reservation-details-title">A few things<br>to know.</h2>
+          <p>We keep things relaxed, welcoming and centred on the table. Here are a few details to help you plan.</p>
+        </div>
+        <div class="reservation-detail-list">
+          <article class="reservation-detail reveal"><span class="detail-number">01</span><div><h3>When we're open</h3><p>Monday–Thursday, 5–10pm · Friday, 5–11pm · Saturday, 12–11pm · Sunday, 12–9pm.</p></div></article>
+          <article class="reservation-detail reveal"><span class="detail-number">02</span><div><h3>Running late?</h3><p>Give us a call if your plans change. We’ll do our best to look after your table.</p></div></article>
+          <article class="reservation-detail reveal"><span class="detail-number">03</span><div><h3>A bigger gathering</h3><p>For seven or more guests, or a special event, please contact us directly.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="reservation-cta" aria-labelledby="reservation-cta-title">
+      <div class="container cta-inner reveal">
+        <div><p class="eyebrow">Questions before you book?</p><h2 id="reservation-cta-title">We're happy<br>to help.</h2><p>Get in touch and we'll point you in the right direction.</p></div>
+        <a class="btn" href="contact.html">Visit contact <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2.8c1.7 3.1 5.4 5.2 5.4 10a5.4 5.4 0 1 1-10.8 0c0-2.2 1-4.1 2.6-5.8.1 2 1.1 3.1 2 3.6-.2-3.1.1-5.3.8-7.8Z" stroke="var(--ink)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 14.1c1 1.2 1.8 2 1.8 3.1a1.8 1.8 0 1 1-3.6 0c0-.9.6-1.8 1.8-3.1Z" fill="var(--ink)"/></svg></span><span>ember <span class="brand-ampersand">&</span> oak</span></a>
+          <p>Seasonal plates, open flames and a seat for everyone. Made for good evenings and even better company.</p>
+        </div>
+        <div class="footer-col"><h3>Explore</h3><a href="menu.html">The menu</a><a href="about.html">Our story</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a></div>
+        <div class="footer-col"><h3>Find us</h3><p>18 Foundry Lane<br>Old Town, NY 10013</p><a href="tel:+12125550184">(212) 555-0184</a><a href="mailto:hello@emberandoak.example">hello@emberandoak.example</a></div>
+        <div class="footer-col"><h3>Hours</h3><p>Mon–Thu · 5–10pm<br>Fri · 5–11pm<br>Sat · 12–11pm<br>Sun · 12–9pm</p></div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 Ember & Oak. Demo site, fictional business.</span><span>Thoughtfully made. Best enjoyed together.</span></div>
+    </div>
+  </footer>
+</body>
+</html>
