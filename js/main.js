@@ -112,6 +112,57 @@
     });
   }
 
+  // Reservation request demo: validate locally, then show a clear non-booking confirmation.
+  const reservationForm = document.getElementById('reservation-form');
+  if (reservationForm) {
+    const dateInput = document.getElementById('visit-date');
+    const submitButton = document.getElementById('reservation-submit');
+    const resetButton = document.getElementById('reservation-reset');
+    const successPanel = document.getElementById('reservation-success');
+    const fields = reservationForm.querySelector('.reservation-fields');
+    const privacyNote = reservationForm.querySelector('.reservation-privacy');
+    const demoNote = reservationForm.querySelector('.reservation-demo-note');
+
+    if (dateInput) {
+      const now = new Date();
+      const localToday = new Date(now.getTime() - now.getTimezoneOffset() * 60000)
+        .toISOString().slice(0, 10);
+      dateInput.min = localToday;
+    }
+
+    if (submitButton && successPanel && fields) {
+      submitButton.addEventListener('click', () => {
+        if (!reservationForm.checkValidity()) {
+          reservationForm.reportValidity();
+          return;
+        }
+        fields.hidden = true;
+        if (privacyNote) privacyNote.hidden = true;
+        if (demoNote) demoNote.hidden = true;
+        submitButton.hidden = true;
+        successPanel.hidden = false;
+        successPanel.focus();
+      });
+    }
+
+    if (resetButton && successPanel && fields) {
+      resetButton.addEventListener('click', () => {
+        reservationForm.reset();
+        fields.hidden = false;
+        if (privacyNote) privacyNote.hidden = false;
+        if (demoNote) demoNote.hidden = false;
+        if (submitButton) submitButton.hidden = false;
+        successPanel.hidden = true;
+        if (dateInput) {
+          const now = new Date();
+          dateInput.min = new Date(now.getTime() - now.getTimezoneOffset() * 60000)
+            .toISOString().slice(0, 10);
+        }
+        document.getElementById('guest-name')?.focus();
+      });
+    }
+  }
+
   // A restrained, interactive low-poly mesh for the homepage hero.
   // It pauses when off-screen and is omitted on small/low-power devices.
   const canvas = document.getElementById('hero-mesh');
