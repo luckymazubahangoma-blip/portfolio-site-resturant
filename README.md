@@ -12,10 +12,10 @@ Everything about layout, palette, motion and code quality below still applies. O
 
 ## Status
 
-- Done: `index.html`, `menu.html`, `about.html`, `gallery.html`, `reservations.html`, shared CSS and JS; revision round 1 applied to the first three pages.
-- Gallery and reservations were built with low-poly art. **Both are to be reworked for photography** (see "Using the images").
-- Still to build: `contact.html`.
-- **Next steps in order:** (1) fix `Errors.md`, (2) receive the images, (3) swap the artwork for images, (4) build `contact.html`, (5) browser checks.
+- Done: all six HTML pages (`index.html`, `menu.html`, `about.html`, `gallery.html`, `reservations.html`, `contact.html`), shared CSS and JS; revision round 1 applied to the first three pages.
+- Gallery and reservations still use low-poly artwork and must be reworked for photography.
+- Contact page is built with a CSS-drawn exterior treatment and a stylised map; replace these with `contact-hero.webp` and `contact-map.webp` when the image assets are supplied.
+- **Next steps in order:** (1) receive and commit the optimised image assets, (2) replace low-poly artwork across Home, Menu, About, Gallery and Reservations, and replace Contact's CSS-drawn art with the specified photos, (3) update social previews once the live domain is known, (4) run browser and responsive checks.
 - Open items and unfinished-page link targets are tracked in `Errors.md`.
 
 ## Running locally and deploying
