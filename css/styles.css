@@ -2,7 +2,7 @@
    Portfolio sample 01. Mobile-first, accessible, and dependency-free. */
 :root {
   color-scheme: dark;
-  --ink: #0C1B33; --ink-rgb: 12,27,51; --ink-soft: #14284A; --oat: #F4EBDB; --oat-rgb: 244,235,219; --oat-deep: #E8DCC6;
+  --ink: #0C1B33; --ink-rgb: 12,27,51; --ink-deep: #08152A; --ink-soft: #14284A; --oat: #F4EBDB; --oat-rgb: 244,235,219; --oat-deep: #E8DCC6;
   --ember: #FF5B14; --ember-rgb: 255,91,20; --ember-hot: #FF7A3C; --ember-hot-rgb: 255,122,60; --ember-deep: #B83B0A; --ember-deep-rgb: 184,59,10;
   --charcoal: var(--ink); --charcoal-soft: var(--ink-soft); --white: var(--oat); --paper: var(--oat);
   --accent: var(--ember); --accent-dark: var(--ember-deep); --accent-warm: var(--ember-hot);
@@ -116,7 +116,7 @@ p { margin: 0 0 1rem; }
 
 /* Visit strip */
 .visit-grid { display: grid; gap: 2rem; }
-.visit-card { padding: 1.6rem; border: 1px solid rgba(31,33,36,.12); border-radius: var(--radius-card); background: var(--oat-deep); }
+.visit-card { padding: 1.6rem; border: 1px solid rgba(var(--ink-rgb),.12); border-radius: var(--radius-card); background: var(--oat-deep); }
 .visit-card h3 { margin-bottom: 1rem; }
 .hours-row { display: flex; justify-content: space-between; gap: 1rem; padding: .65rem 0; border-bottom: 1px solid rgba(31,33,36,.12); color: #4A443B; font-size: .875rem; }
 .hours-row:last-child { border: 0; }
@@ -132,15 +132,16 @@ p { margin: 0 0 1rem; }
 .quote-person { color: var(--oat-deep); font-size: .875rem; }
 
 /* CTA and footer */
-.reservation-cta { position: relative; overflow: hidden; padding-block: 5rem; background: var(--accent); isolation: isolate; }
+.reservation-cta { position: relative; overflow: hidden; padding-block: 5rem; background: var(--ember); color: var(--ink); isolation: isolate; }
 .reservation-cta::before, .reservation-cta::after { position: absolute; z-index: -1; width: 360px; height: 360px; border: 1px solid rgba(var(--oat-rgb),.2); border-radius: 42% 58% 61% 39%; content: ''; transform: rotate(28deg); }
 .reservation-cta::before { top: -220px; right: -40px; }
 .reservation-cta::after { right: 18%; bottom: -300px; width: 460px; height: 460px; }
 .cta-inner { display: flex; flex-direction: column; align-items: flex-start; gap: 1.5rem; }
-.cta-inner h2 { max-width: 700px; }
+.cta-inner h2 { max-width: 700px; color:var(--ink); }
+.reservation-cta .eyebrow { color:var(--ink); }
 .cta-inner p { max-width: 470px; color: var(--ink); }
 .cta-inner .btn { background: var(--white); color: var(--charcoal); }
-.site-footer { padding: 3.5rem 0 1.5rem; background: #08152A; }
+.site-footer { padding: 3.5rem 0 1.5rem; background: var(--ink-deep); }
 .footer-grid { display: grid; gap: 2rem; padding-bottom: 3rem; }
 .footer-brand p { max-width: 300px; margin-top: 1rem; color: var(--oat-deep); font-size: .875rem; }
 .footer-col h3 { margin-bottom: .9rem; font-family: var(--font-body); font-size: .875rem; letter-spacing: .12em; text-transform: uppercase; }
@@ -331,7 +332,7 @@ p { margin: 0 0 1rem; }
 }
 @media (min-width:900px) {
  .about-hero { min-height:740px; }.about-hero-art { right:3%; width:600px; }
- .about-hero::before { background:linear-gradient(90deg,rgba(var(--ink-rgb),.98),rgba(var(--ink-rgb),.8) 43%,rgba(31,33,36,.06)); }
+ .about-hero::before { background:linear-gradient(90deg,rgba(var(--ink-rgb),.98),rgba(var(--ink-rgb),.8) 43%,rgba(var(--ink-rgb),.06)); }
  .team-grid { grid-template-columns:repeat(4,minmax(0,1fr)); }
 }
 @media (max-width:520px) {
@@ -430,6 +431,7 @@ p { margin: 0 0 1rem; }
 @media (hover:hover) and (pointer:fine) {
   .hero { --pointer-x:50%; --pointer-y:50%; }
   .hero::after { content:""; position:absolute; inset:0; pointer-events:none; background:radial-gradient(360px circle at var(--pointer-x) var(--pointer-y),rgba(var(--ember-hot-rgb),.12),transparent 70%); }
+  .reservation-cta { background:radial-gradient(360px circle at var(--pointer-x,85%) var(--pointer-y,50%),rgba(var(--oat-rgb),.2),transparent 70%),var(--ember); }
   .dish-card,.value-card,.team-card { transition:transform .45s var(--ease),box-shadow .45s var(--ease),border-color .45s var(--ease); }
   .dish-card:hover,.value-card:hover,.team-card:hover { transform:translateY(-7px); box-shadow:0 22px 48px rgba(var(--ink-rgb),.2); }
   .dish-card:hover .dish-art svg { transform:scale(1.06) rotate(-2deg); }
