@@ -512,7 +512,7 @@ p { margin: 0 0 1rem; }
 .form-field label { color:var(--ink); font-size:.875rem; font-weight:700; }
 .form-field label > span[aria-hidden="true"] { color:var(--ember-deep); }
 .form-field .optional { color:var(--paper-muted); font-size:.8rem; font-weight:500; }
-.form-field input,.form-field select,.form-field textarea { width:100%; min-width:0; min-height:50px; padding:.8rem .95rem; border:1px solid rgba(var(--ink-rgb),.22); border-radius:16px; outline:none; background:rgba(255,255,255,.42); color:var(--ink); font:400 .95rem var(--font-body); transition:border-color .2s ease,box-shadow .2s ease,background .2s ease; }
+.form-field input,.form-field select,.form-field textarea { width:100%; min-width:0; min-height:50px; padding:.8rem .95rem; border:1px solid rgba(var(--ink-rgb),.22); border-radius:16px; outline:none; background:rgba(var(--oat-rgb),.42); color:var(--ink); font:400 .95rem var(--font-body); transition:border-color .2s ease,box-shadow .2s ease,background .2s ease; }
 .form-field textarea { min-height:100px; resize:vertical; }
 .form-field input::placeholder,.form-field textarea::placeholder { color:rgba(var(--ink-rgb),.48); }
 .form-field input:focus,.form-field select:focus,.form-field textarea:focus { border-color:var(--ember-deep); background:var(--oat); box-shadow:0 0 0 3px rgba(var(--ember-rgb),.16); }
