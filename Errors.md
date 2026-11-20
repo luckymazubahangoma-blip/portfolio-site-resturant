@@ -2,20 +2,24 @@
 
 **Read this at the start of every session, right after README.md.** Fix applicable open items before starting a new page. When an item is fixed, move it to the Fixed list with the commit that resolved it.
 
-Last reviewed (Nov 20): `reservations.html`, shared CSS and JS, plus the existing page instructions. Browser checks are still outstanding.
+Last reviewed (Nov 20): all six HTML pages for local page links; `contact.html` and its new shared CSS. Browser checks and image replacement remain outstanding.
 
 ## High priority
 
-1. **Broken links to pages not built yet.** `reservations.html` is now built. `contact.html` remains. Recheck every local link across all six pages after Contact is built.
+1. ~~Broken links to pages not built yet.~~ All six pages now exist. A local-link audit across all six HTML pages found no broken page links (124 local page references checked). Recheck after future edits.
 
 2. **Social preview format and canonical URL.** Existing pages currently reference a relative SVG. Social crawlers need an absolute PNG/JPG URL. The live site domain has not yet been provided, so the absolute image URL and `og:url` cannot be set reliably. Finish when the Cloudflare Pages domain/custom domain is known.
 
 ## Medium priority
 
-3. **Browser and viewport checks.** Required checks at 360, 768, 900, 1024, 1280, 1440 and 1920px, plus real-phone inspection, console checks and Lighthouse are not yet complete. Do not claim a score until measured.
+3. **Photography assets not yet committed.** The reference sheet establishes the target mood, but the individual optimised WebP/PNG assets listed in the README are not in `images/`. Gallery and Reservations still contain low-poly art; Contact currently uses CSS-drawn exterior artwork and a stylised inline map. Replace these when the named image files are supplied.
+
+4. **Browser and viewport checks.** Required checks at 360, 768, 900, 1024, 1280, 1440 and 1920px, plus real-phone inspection, console checks and Lighthouse are not yet complete. Do not claim a score until measured.
 
 ## Fixed
 
+- Built `contact.html` with address, opening hours, phone/email links, a stylised neighbourhood map and keyboard-accessible native FAQ disclosures. Added responsive desktop styling; mobile layout follows the existing design conventions.
+- Audited local page links across all six pages: 124 local page references checked, no missing page targets. Commit: `76905bb` (page), `f8b9972` (styles), `2eb63f4` (map label cleanup).
 - Built `reservations.html` with an accessible table-request form, native field validation, a date minimum, responsive desktop layout and an explicit demo-only success state; no backend or real booking submission is implied.
 - Built `gallery.html` with six original low-poly SVG illustrations, responsive asymmetric cards and keyboard-accessible category filters.
 - Corrected duplicate CTA eyebrow class attributes on all three existing pages; CTA eyebrow now uses ink text on ember.
