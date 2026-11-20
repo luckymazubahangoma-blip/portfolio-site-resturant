@@ -132,10 +132,11 @@
   const rows = 6;
 
   const makePoints = (preserve = false) => {
+    const previousPoints = preserve ? points : [];
     points = [];
     for (let row = 0; row <= rows; row += 1) {
       for (let column = 0; column <= columns; column += 1) {
-        const previous = preserve ? points[row * (columns + 1) + column] : null;
+        const previous = previousPoints[row * (columns + 1) + column] || null;
         const jitterX = previous ? previous.jitterX : (Math.random() - 0.5) * 38;
         const jitterY = previous ? previous.jitterY : (Math.random() - 0.5) * 34;
         points.push({
