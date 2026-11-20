@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0C1B33">
+  <title>Gallery | Ember & Oak Wood-Fire Kitchen</title>
+  <meta name="description" content="Explore the Ember & Oak world through low-poly illustrations of seasonal plates, live fire and the spaces made for gathering.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Gallery | Ember & Oak">
+  <meta property="og:description" content="A closer look at the food, the flame and the feeling around the table.">
+  <meta property="og:image" content="images/ember-og.svg">
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body class="gallery-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav-shell" aria-label="Main navigation">
+        <a class="brand" href="index.html" aria-label="Ember and Oak home">
+          <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2.8c1.7 3.1 5.4 5.2 5.4 10a5.4 5.4 0 1 1-10.8 0c0-2.2 1-4.1 2.6-5.8.1 2 1.1 3.1 2 3.6-.2-3.1.1-5.3.8-7.8Z" stroke="var(--ink)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 14.1c1 1.2 1.8 2 1.8 3.1a1.8 1.8 0 1 1-3.6 0c0-.9.6-1.8 1.8-3.1Z" fill="var(--ink)"/></svg></span>
+          <span>ember <span class="brand-ampersand">&</span> oak</span>
+        </a>
+        <div class="nav-links">
+          <a href="index.html">Home</a><a href="menu.html">Menu</a><a href="about.html">Our story</a><a href="gallery.html" aria-current="page">Gallery</a><a href="contact.html">Contact</a>
+        </div>
+        <a class="btn nav-cta" href="reservations.html">Book a table <span aria-hidden="true">↗</span></a>
+        <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-nav">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </nav>
+      <div class="mobile-nav" id="mobile-nav">
+        <a href="index.html">Home</a><a href="menu.html">Menu</a><a href="about.html">Our story</a><a href="gallery.html" aria-current="page">Gallery</a><a href="reservations.html">Reservations</a><a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="gallery-hero" aria-labelledby="gallery-title">
+      <div class="container gallery-hero-grid">
+        <div class="gallery-hero-copy">
+          <p class="eyebrow">A little look around</p>
+          <h1 id="gallery-title">The good stuff,<br><em>up close.</em></h1>
+          <p class="lead">A visual notebook of the things we love: food made with care, the warmth of the hearth, and the moments that happen around a table.</p>
+        </div>
+        <div class="gallery-hero-art" aria-hidden="true">
+          <svg viewBox="0 0 560 440">
+            <path d="m280 24 208 120v152L280 416 72 296V144Z" fill="#14284A" stroke="#FF7A3C" stroke-opacity=".3" stroke-width="3"/>
+            <path d="m72 144 208 120 208-120M280 264v152" fill="none" stroke="#F4EBDB" stroke-opacity=".25" stroke-width="2"/>
+            <path d="m72 296 208-32 208 32-208 120Z" fill="#B66A49" opacity=".65"/>
+            <ellipse cx="280" cy="220" rx="145" ry="90" fill="#F4EBDB" stroke="#E8DCC6" stroke-width="8"/>
+            <path d="M174 220c20-55 99-75 150-38 35 27 17 75-25 89-53 18-139-7-125-51Z" fill="#8F4937"/>
+            <path d="m190 199 100 64m-64-87 99 62" stroke="#E8A16B" stroke-width="8" stroke-linecap="round"/>
+            <path d="M365 135c-32-29-13-62 8-80-3 26 15 28 15 0 34 31 39 58 17 83-10 11-28 10-40-3Z" fill="#FF5B14"/>
+            <path d="M379 133c-12-13-4-27 5-35 0 12 10 13 10 0 13 14 10 27-2 35-5 4-10 3-13 0Z" fill="#F4EBDB"/>
+            <g fill="#FF7A3C"><circle cx="116" cy="110" r="7"/><circle cx="440" cy="350" r="8"/><circle cx="150" cy="350" r="5"/></g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="section gallery-section" aria-labelledby="gallery-grid-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div><p class="eyebrow">The Ember & Oak collection</p><h2 id="gallery-grid-title">A feast for<br>the eyes.</h2></div>
+          <p>Every image is an original low-poly illustration made for this fictional restaurant concept. Choose a view and wander through.</p>
+        </div>
+        <div class="gallery-filters" role="group" aria-label="Filter gallery artwork">
+          <button class="gallery-filter is-active" type="button" data-gallery-filter="all" aria-pressed="true">All pieces</button>
+          <button class="gallery-filter" type="button" data-gallery-filter="plates" aria-pressed="false">From the kitchen</button>
+          <button class="gallery-filter" type="button" data-gallery-filter="fire" aria-pressed="false">Around the fire</button>
+          <button class="gallery-filter" type="button" data-gallery-filter="gathering" aria-pressed="false">The gathering</button>
+        </div>
+        <div class="gallery-grid" id="gallery-grid">
+          <article class="gallery-card gallery-card--wide reveal" data-gallery-category="plates">
+            <div class="gallery-art gallery-art--plate"><svg viewBox="0 0 520 340" role="img" aria-label="Low-poly illustration of a wood-fired steak on a ceramic plate"><ellipse cx="260" cy="280" rx="190" ry="26" fill="#0C1B33" opacity=".3"/><ellipse cx="260" cy="218" rx="190" ry="105" fill="#F4EBDB" stroke="#B9A58D" stroke-width="8"/><ellipse cx="260" cy="218" rx="155" ry="78" fill="#E8DCC6"/><path d="M120 210c18-66 103-92 174-58 62 30 54 92-4 115-71 28-184 5-170-57Z" fill="#8F4937" stroke="#63382E" stroke-width="7"/><path d="m148 180 128 85m-92-111 126 80m-58-96 105 67" stroke="#E8A16B" stroke-width="10" stroke-linecap="round"/><g fill="#77865B"><path d="M120 176q-36-42-15-57 28 12 15 57ZM145 160q-4-39 22-41 9 27-22 41ZM380 194q31-34 49-14-11 26-49 14Z"/></g><g fill="#FF7A3C"><circle cx="160" cy="270" r="8"/><circle cx="365" cy="265" r="7"/></g></svg></div>
+            <div class="gallery-card-copy"><p class="eyebrow">From the kitchen</p><h3>Coal, craft & good cuts</h3><p>Simple seasoning, patient heat and a plate worth sharing.</p></div>
+          </article>
+          <article class="gallery-card reveal" data-gallery-category="fire">
+            <div class="gallery-art gallery-art--fire"><svg viewBox="0 0 400 300" role="img" aria-label="Low-poly illustration of a bright flame rising from glowing logs"><path d="M45 242h310" stroke="#B88A65" stroke-width="15" stroke-linecap="round"/><path d="m90 226 95-57 133 55-94 48Z" fill="#8F4937"/><path d="m185 169 133 55-4 34-131-58Z" fill="#63382E"/><path d="M150 202c-40-55 10-105 34-154 8 49 41 52 34-4 66 59 70 120 18 158-30 22-70 19-86 0Z" fill="#FF5B14"/><path d="M196 207c-20-33 11-66 21-94 12 33 34 39 29-3 38 39 35 76 5 99-20 15-45 9-55-2Z" fill="#FF7A3C"/><path d="M215 207c-8-19 7-34 15-49 7 18 18 22 14-2 21 22 16 42-1 52-12 7-23 4-28-1Z" fill="#F4EBDB"/></svg></div>
+            <div class="gallery-card-copy"><p class="eyebrow">Around the fire</p><h3>Where the warmth begins</h3><p>The hearth is the heart of the room.</p></div>
+          </article>
+          <article class="gallery-card reveal" data-gallery-category="plates">
+            <div class="gallery-art gallery-art--veg"><svg viewBox="0 0 400 300" role="img" aria-label="Low-poly illustration of roasted carrots and herbs"><ellipse cx="200" cy="235" rx="145" ry="34" fill="#F4EBDB" stroke="#B9A58D" stroke-width="7"/><path d="m115 226 39-115 27 4-24 120Z" fill="#D8783F"/><path d="m174 235 8-138 27-3 5 143Z" fill="#E78B4D"/><path d="m224 235 42-115 27 8-27 115Z" fill="#C45B35"/><g fill="#7B8B5B"><path d="M154 112q-28-34-9-45 25 13 9 45ZM181 102q-3-37 20-39 8 25-20 39ZM206 98q-9-37 13-43 16 23-13 43ZM270 130q15-37 36-23-5 27-36 23Z"/></g><g fill="#FF7A3C"><circle cx="110" cy="214" r="5"/><circle cx="293" cy="211" r="6"/></g></svg></div>
+            <div class="gallery-card-copy"><p class="eyebrow">From the kitchen</p><h3>Market colour</h3><p>Bright produce, kissed by the coals.</p></div>
+          </article>
+          <article class="gallery-card gallery-card--wide reveal" data-gallery-category="gathering">
+            <div class="gallery-art gallery-art--table"><svg viewBox="0 0 520 340" role="img" aria-label="Low-poly illustration of a welcoming dining table with plates and candlelight"><path d="M70 190 260 95 450 190 260 285Z" fill="#B9855F"/><path d="M70 190v28l190 99v-32Z" fill="#8F4937"/><path d="M260 285v32l190-99v-28Z" fill="#63382E"/><ellipse cx="170" cy="190" rx="65" ry="35" fill="#F4EBDB" stroke="#E8DCC6" stroke-width="5"/><ellipse cx="350" cy="190" rx="65" ry="35" fill="#F4EBDB" stroke="#E8DCC6" stroke-width="5"/><ellipse cx="260" cy="145" rx="60" ry="33" fill="#F4EBDB" stroke="#E8DCC6" stroke-width="5"/><path d="M251 114c-17-20-4-42 9-54 0 19 12 20 12 0 23 21 24 39 8 54-9 8-22 7-29 0Z" fill="#FF5B14"/><path d="M263 114c-6-8 0-16 5-22 3 9 9 10 8-1 11 12 8 22-1 26-5 2-9 0-12-3Z" fill="#FFCA7A"/><path d="M110 254v52m300-52v52" stroke="#B88A65" stroke-width="12" stroke-linecap="round"/></svg></div>
+            <div class="gallery-card-copy"><p class="eyebrow">The gathering</p><h3>Room for one more</h3><p>Good evenings are better when the table is full.</p></div>
+          </article>
+          <article class="gallery-card reveal" data-gallery-category="fire">
+            <div class="gallery-art gallery-art--embers"><svg viewBox="0 0 400 300" role="img" aria-label="Low-poly illustration of glowing embers beneath a dark blue night sky"><path d="M45 235 120 180l80 28 80-66 75 75v43H45Z" fill="#14284A"/><path d="m120 180 80 28-28 52-127 0Z" fill="#63382E"/><path d="m200 208 80-66 75 75-103 40Z" fill="#8F4937"/><g fill="#FF5B14"><path d="M104 215c-12-28 9-44 18-63 8 20 20 21 18-2 25 24 26 50 7 67-13 11-34 9-43-2Z"/><path d="M240 224c-9-21 8-34 16-48 7 17 17 18 16-2 20 20 20 38 4 51-11 9-28 7-36-1Z"/></g><g fill="#FFCA7A"><circle cx="160" cy="140" r="5"/><circle cx="218" cy="110" r="4"/><circle cx="300" cy="95" r="6"/><circle cx="85" cy="95" r="4"/></g></svg></div>
+            <div class="gallery-card-copy"><p class="eyebrow">Around the fire</p><h3>Little sparks</h3><p>Even after the flame, the warmth stays.</p></div>
+          </article>
+          <article class="gallery-card reveal" data-gallery-category="gathering">
+            <div class="gallery-art gallery-art--room"><svg viewBox="0 0 400 300" role="img" aria-label="Low-poly illustration of a cosy restaurant room with warm pendant lights"><path d="M40 260V70l160-45 160 45v190Z" fill="#14284A"/><path d="M40 70 200 25v235H40Z" fill="#1B355B"/><path d="m200 25 160 45v190H200Z" fill="#0C1B33"/><path d="M70 260v-90l130-45 130 45v90Z" fill="#8F4937"/><path d="M70 170 200 125v90L70 260Z" fill="#B9855F"/><path d="m200 125 130 45v90l-130-45Z" fill="#63382E"/><path d="M118 30v75m164-75v75" stroke="#E8DCC6" stroke-width="4"/><path d="M91 105h55l-10 25h-35Zm164 0h55l-10 25h-35Z" fill="#FF7A3C"/><path d="M110 225h180" stroke="#F4EBDB" stroke-opacity=".6" stroke-width="5" stroke-linecap="round"/></svg></div>
+            <div class="gallery-card-copy"><p class="eyebrow">The gathering</p><h3>A room to settle into</h3><p>Warm light, honest materials and an easy welcome.</p></div>
+          </article>
+        </div>
+        <p class="gallery-empty" hidden>No pieces in this collection yet. Try another view.</p>
+      </div>
+    </section>
+
+    <section class="reservation-cta" aria-labelledby="gallery-cta-title">
+      <div class="container cta-inner reveal">
+        <div><p class="eyebrow">The best part is being here</p><h2 id="gallery-cta-title">See you around<br>the table.</h2><p>Come for the food. Stay for the feeling.</p></div>
+        <a class="btn" href="reservations.html">Save your seat <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2.8c1.7 3.1 5.4 5.2 5.4 10a5.4 5.4 0 1 1-10.8 0c0-2.2 1-4.1 2.6-5.8.1 2 1.1 3.1 2 3.6-.2-3.1.1-5.3.8-7.8Z" stroke="var(--ink)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 14.1c1 1.2 1.8 2 1.8 3.1a1.8 1.8 0 1 1-3.6 0c0-.9.6-1.8 1.8-3.1Z" fill="var(--ink)"/></svg></span><span>ember <span class="brand-ampersand">&</span> oak</span></a>
+          <p>Seasonal plates, open flames and a seat for everyone. Made for good evenings and even better company.</p>
+        </div>
+        <div class="footer-col"><h3>Explore</h3><a href="menu.html">The menu</a><a href="about.html">Our story</a><a href="gallery.html" aria-current="page">Gallery</a><a href="reservations.html">Reservations</a></div>
+        <div class="footer-col"><h3>Find us</h3><p>18 Foundry Lane<br>Old Town, NY 10013</p><a href="tel:+12125550184">(212) 555-0184</a><a href="mailto:hello@emberandoak.example">hello@emberandoak.example</a></div>
+        <div class="footer-col"><h3>Hours</h3><p>Mon–Thu · 5–10pm<br>Fri · 5–11pm<br>Sat · 12–11pm<br>Sun · 12–9pm</p></div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 Ember & Oak. Demo site, fictional business.</span><span>Thoughtfully made. Best enjoyed together.</span></div>
+    </div>
+  </footer>
+</body>
+</html>
