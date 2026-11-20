@@ -6,7 +6,7 @@ Last reviewed (Nov 20): `index.html`, `menu.html`, `about.html`, `css/styles.css
 
 ## High priority
 
-1. **Broken links to pages not built yet.** `gallery.html`, `reservations.html` and `contact.html` are now being built in sequence. Recheck every local link after all three pages exist.
+1. **Broken links to pages not built yet.** `gallery.html` is now built. `reservations.html` and `contact.html` remain. Recheck every local link after both pages exist.
 
 2. **Social preview format and canonical URL.** Existing pages currently reference a relative SVG. Social crawlers need an absolute PNG/JPG URL. The live site domain has not yet been provided, so the absolute image URL and `og:url` cannot be set reliably. Finish when the Cloudflare Pages domain/custom domain is known.
 
@@ -16,6 +16,7 @@ Last reviewed (Nov 20): `index.html`, `menu.html`, `about.html`, `css/styles.css
 
 ## Fixed
 
+- Built `gallery.html` with six original low-poly SVG illustrations, responsive asymmetric cards and keyboard-accessible category filters.
 - Corrected duplicate CTA eyebrow class attributes on all three existing pages; CTA eyebrow now uses ink text on ember.
 - Rebuilt the desktop menu navigation as a two-column layout with an in-flow sticky category rail; removed the fixed rail and menu offset.
 - Replaced old charcoal/red CSS values with the ink/oat/ember token system and alpha RGB tokens.
